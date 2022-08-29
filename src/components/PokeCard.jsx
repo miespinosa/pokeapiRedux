@@ -3,13 +3,13 @@ import{ Card } from 'antd';
 
 
 const { Meta } = Card;
-const PokeCard = ({ name }) => {
+const PokeCard = ({ name, image, pokemonTypes }) => {
     return <Card
-        title={name}
-        cover={<img src='' alt='Ditto' />}
+        title={name.toUpperCase()}
+        cover={<img src={image} alt={name} />}
         extra={<StarOutlined/>}
     >
-        <Meta description='fire, magic'/>
+        <Meta title={pokemonTypes}/>
 
     </Card>
 }
